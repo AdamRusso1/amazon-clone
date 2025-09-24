@@ -4,19 +4,19 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAb2z8Krikdttj1VzQBHVRb8bJ4NmAQAY0",
-  authDomain: "challenge-db410.firebaseapp.com",
-  projectId: "challenge-db410",
-  storageBucket: "challenge-db410.firebasestorage.app",
-  messagingSenderId: "289216728230",
-  appId: "1:289216728230:web:6463038deea00c6ddff867",
-  measurementId: "G-LJGWHX1D0Z",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
 // Initialize services
-const db = getFirestore(app);
+const db = getFirestore(app, "amazon-clone"); // Specify the amazon-clone database
 const auth = getAuth(app);
 
 export { db, auth };
