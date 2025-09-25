@@ -1,70 +1,218 @@
-# Getting Started with Create React App
+# 🛒 Amazon Clone - E-Commerce Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A full-stack e-commerce web application built with React, Firebase, and Stripe that replicates core Amazon shopping functionality.
 
-## Available Scripts
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/AdamRusso1/amazon-clone)
 
-In the project directory, you can run:
 
-### `npm start`
+## 📸 Project Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## 🎯 Project Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This Amazon clone demonstrates full-stack web development skills by implementing a complete e-commerce shopping experience. Users can browse products, manage their shopping cart, make secure payments, and view their order history.
+## 🌐 Live Demo
 
-### `npm run build`
+**🚀 [View Live Application](https://challenge-db410.web.app/)** ← *Click to try the full application*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*Test with card: 4242 4242 4242 4242 | Any future date | Any CVC*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📸 Project Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### 🔧 Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Frontend:**
+- React 18 with Hooks
+- React Router v6 for navigation
+- React Context API for state management
+- CSS3 for styling
+- Stripe Elements for payment forms
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Backend & Services:**
+- Firebase Authentication for user management
+- Firebase Firestore for data storage
+- Firebase Functions for payment processing
+- Stripe API for secure payments
+- Firebase Hosting for deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ✨ Features Implemented
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 🔐 User Authentication
+- User registration and login with email/password
+- Firebase Authentication integration
+- Persistent user sessions
+- Sign out functionality
+- Protected routes for authenticated users
 
-## Learn More
+### 🛍️ Shopping Experience
+- Product catalog display with images, titles, prices, and ratings
+- Add products to shopping cart
+- Remove products from cart
+- Real-time cart count in header
+- Cart persistence during user session
+- Checkout page with order summary
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 💳 Payment Processing
+- Secure checkout with Stripe integration
+- Payment form with card details validation
+- Order total calculation including items and pricing
+- Payment confirmation and processing
+- Error handling for failed payments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📦 Order Management
+- Order history page for authenticated users
+- Order details including items, quantities, and total cost
+- Order date and payment confirmation
+- Orders stored in Firebase Firestore
+- Individual order display with product details
 
-### Code Splitting
+### 🎨 User Interface
+- Responsive design that works on desktop and mobile
+- Amazon-inspired header with logo, search bar, and navigation
+- Product cards with ratings display (star system)
+- Clean checkout and payment forms
+- Professional order history layout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🏗️ Technical Implementation
 
-### Analyzing the Bundle Size
+### Frontend Architecture
+- Component-based React architecture
+- State management using Context API and useReducer
+- React Router for single-page application navigation
+- Reusable components (Header, Product, CheckoutProduct, Order)
+- CSS modules for component styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Backend Integration
+- Firebase Functions for payment processing endpoints
+- Firestore database for storing user orders
+- Firebase Authentication for user management
+- Stripe webhook handling for payment confirmation
+- Environment variables for secure API key management
 
-### Making a Progressive Web App
+### Key Components
+- **App.js**: Main application with routing and authentication state
+- **Header.js**: Navigation with user authentication and cart count
+- **Home.js**: Product catalog display
+- **Product.js**: Individual product cards with add to cart functionality
+- **Checkout.js**: Shopping cart summary and checkout initiation
+- **Payment.js**: Stripe payment form and order processing
+- **Orders.js**: Order history display for authenticated users
+- **Login.js**: User authentication forms
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🚀 Setup & Installation
 
-### Advanced Configuration
+### Prerequisites
+- Node.js (v14 or higher)
+- npm package manager
+- Firebase account with project setup
+- Stripe account for payment processing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Installation Steps
+```bash
+# Clone the repository
+git clone https://github.com/AdamRusso1/amazon-clone.git
+cd amazon-clone/amazon-clone
 
-### Deployment
+# Install dependencies
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# Create environment file and add your credentials
+cp .env.example .env
+# Add your Firebase and Stripe keys to .env
 
-### `npm run build` fails to minify
+# Start development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Environment Variables Required
+```env
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
+REACT_APP_FIREBASE_PROJECT_ID=your_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
+REACT_APP_FIREBASE_APP_ID=your_app_id
+```
+
+## 💳 Testing Payments
+
+Use Stripe's test card numbers:
+- **Successful Payment**: `4242 4242 4242 4242`
+- **Declined Payment**: `4000 0000 0000 0002`
+- Use any future expiry date and any 3-digit CVC
+
+## 🔧 Development Skills Demonstrated
+
+### React Development
+- Functional components with React Hooks
+- Context API for global state management
+- useReducer for complex state logic
+- Component composition and reusability
+- Event handling and form management
+
+### Firebase Integration
+- Authentication setup and user management
+- Firestore database operations (read/write)
+- Firebase Functions deployment and usage
+- Security rules configuration
+- Environment-based configuration
+
+### Payment Integration
+- Stripe Elements integration
+- Secure payment form handling
+- Payment intent creation and confirmation
+- Error handling for payment failures
+- Order confirmation and database updates
+
+### General Web Development
+- Responsive CSS design
+- Git version control with meaningful commits
+- Environment variable management for security
+- API integration and error handling
+- Clean code organization and documentation
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── CheckoutProduct.js    # Cart item display
+│   ├── Header.js            # Navigation and user menu
+│   ├── Order.js             # Individual order display
+│   ├── Orders.js            # Order history page
+│   ├── Product.js           # Product card component
+│   └── Subtotal.js          # Cart total calculation
+├── pages/
+│   ├── Checkout.js          # Shopping cart page
+│   ├── Home.js              # Main product catalog
+│   ├── Login.js             # Authentication forms
+│   └── payment.js           # Stripe payment processing
+├── firebase.js              # Firebase configuration
+├── reducer.js               # State management logic
+├── StateProvider.js         # Context provider setup
+├── axios.js                 # API configuration
+└── App.js                   # Main application component
+```
+## 👨‍💻 About This Project
+
+Built by **Adam Russo** as a demonstration of full-stack web development capabilities. This project showcases practical implementation of modern web technologies and real-world e-commerce functionality.
+
+## 🎯 Learning Outcomes
+
+This project helped me develop skills in:
+- Full-stack application architecture
+- Third-party API integration (Firebase, Stripe)
+- State management in complex React applications
+- Secure payment processing implementation
+- User authentication and session management
+- Cloud deployment and configuration
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+*This project demonstrates practical full-stack development skills with modern technologies. The implementation focuses on clean code, user experience, and secure payment processing.*
