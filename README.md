@@ -4,11 +4,6 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/AdamRusso1/amazon-clone)
 
-
-## 📸 Project Screenshots
-
-
-
 ## 🎯 Project Overview
 
 This Amazon clone demonstrates full-stack web development skills by implementing a complete e-commerce shopping experience. Users can browse products, manage their shopping cart, make secure payments, and view their order history.
